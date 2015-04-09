@@ -11,3 +11,7 @@ What even...?
 -------------
 1. For some reason, `countdown` is not a valid name for elements but `my-countdown` is.
 2. I would like to name the attribute `end-date` instead of `endDate` but I don't know how.
+
+
+
+Oh by the way, there's a non-Polymer Codepen version: http://codepen.io/Retzudo/pen/KwLLKg
