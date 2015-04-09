@@ -1,0 +1,23 @@
+{
+  "name": "countdown-element",
+  "version": "1.0.0",
+  "authors": [
+    "Retzudo"
+  ],
+  "description": "A countdown element for Polymer",
+  "keywords": [
+    "countdown",
+    "polymer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5"
+  }
+}
