@@ -1,6 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="my-countdown" attributes="endDate">
+<dom-module id="my-countdown">
     <template>
         <span class="days" title="Days">{{days}}</span>
         <span class="hours" title="Hours">{{hours}}</span>
@@ -48,18 +48,22 @@
     </template>
     <script>
         Polymer({
+            is: "my-countdown",
             days: 0,
             hours: 0,
             minutes: 0,
             seconds: 0,
+            properties: {
+                endDate: Date,
+            },
             ready: function() {
                 this.countdown();
             },
             countdown: function() {
-                var endDate = new Date(this.endDate);
-                var endTimestamp = endDate.getTime();
+                var endTimestamp = this.endDate.getTime();
                 var nowTimestamp = Date.now();
                 var deltaT = Math.abs(endTimestamp - nowTimestamp) / 1000;
+
                 if (nowTimestamp < endTimestamp) {
                     this.days = Math.floor(deltaT / 86400);
                     deltaT -= this.days * 86400;
@@ -69,9 +73,9 @@
                     deltaT -= this.minutes * 60;
                     this.seconds = Math.floor(deltaT % 60);
 
-                    this.async(this.countdown, null, 1000);
+                    this.async(this.countdown, 1000);
                 }
             }
         });
     </script>
-</polymer-element>
+</dom-module>
