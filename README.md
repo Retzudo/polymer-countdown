@@ -4,7 +4,7 @@ This is a countdown element to gather some experience with Polymer
 
 Use it like this:
 ```html
-<my-countdown endDate="2015-08-20T18:00:00+0200"></my-countdown>
+<my-countdown end-date="2015-08-20T18:00:00+0200"></my-countdown>
 ```
 
 What even...?
